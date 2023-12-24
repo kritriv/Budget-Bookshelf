@@ -1,9 +1,10 @@
 let baseURL;
 
 if (process.env.NODE_ENV === 'production') {
-  baseURL = 'https://your-live-url.com';
+  baseURL = 'https://budget-bookshelf.vercel.app';
 } else {
-  baseURL = 'http://localhost:5000';
+  baseURL = 'https://budget-bookshelf.vercel.app';
+  // baseURL = 'http://localhost:5000';
 }
 
 export const DomainURL = baseURL;
