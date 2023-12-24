@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "build" : "npm install && npm install --prefix client && npm build --prefix client"
   },
   "author": "",
   "license": "ISC",
