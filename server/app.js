@@ -2,7 +2,15 @@ require("dotenv").config();
 const express=require('express');
 const app=express()
 const port=process.env.PORT || 5000;
-const cors=require('cors')
+const cors=require('cors');
+const path = require ('path');
+
+// const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/client/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+});
 
 //middleware
 app.use(cors());
