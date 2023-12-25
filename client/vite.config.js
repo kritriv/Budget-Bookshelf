@@ -6,7 +6,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/server': {
-        target: 'http://localhost:5000',
+        target: 'https://budget-bookshelf-apis-production.up.railway.app',
+        // target: 'http://localhost:5000',
         secure: false,
       },
     },
