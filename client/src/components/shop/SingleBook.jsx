@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 const SingleBook = () => {
   const { _id, bookTitle, imageURL, price, bookDescription, authorName } = useLoaderData();
 
+  const NavigateClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="px-4 lg:px-24 bg-cyan-50  flex items-center">
       {/* About section */}
@@ -21,7 +25,7 @@ const SingleBook = () => {
         </div>
         <div className="md:w-1/2 space-y-8 h-full">
           <div></div>
-          <Link to="/shop" className="mt-8 block">
+          <Link to="/shop" className="mt-8 block" onClick = {NavigateClick} >
             <button
               className="bg-blue-700 text-white font-semibold px-5 py-2 rounded hover:bg-black transition-all duration-300">
               Shop Now
